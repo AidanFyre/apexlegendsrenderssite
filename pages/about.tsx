@@ -1,5 +1,6 @@
 import 'app/globals.css'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function index() {
   return (
@@ -9,9 +10,9 @@ export default function index() {
           About
         </h1>
         <nav className="pb-6 pt-4 text-xl text-right lg:w-auto lg:p-4">
-          <a href="/" className="p-2">Home</a>
-          <a href="/about" className="p-2">About</a>
-          <a href="/requests" className="p-2">Requests</a>
+        <Link href="/"><a className="p-2">Home</a></Link>
+        <Link href="/about"><a className="p-2">About</a></Link>
+        <Link href="/requests"><a className="p-2">Requests</a></Link>
         </nav>
       </div>
     </main>
