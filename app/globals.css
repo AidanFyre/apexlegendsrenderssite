@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,7 +9,14 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --midnight-black: #0D0D0D; /* Almost pure black, perfect for a very dark background. */
+  --eclipse: #252525; /* A slightly lighter shade of black, ideal for layering and depth. */
+  --dark-charcoal: #303030; /* A deep grey with a hint of blue, suitable for text or UI elements. */
+  --obsidian: #1C1C1C; /* A rich, dark black with blue undertones, great for accents or buttons. */
+  --phthalo-blue: #000F3B; /* A very dark blue, almost black, for bold highlights or active elements. */
+  --jet-black: #020202; /* True black, for text or critical UI components for maximum contrast.  */
 }
+
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -16,12 +26,21 @@
   }
 }
 
+.header {
+  background: var(--eclipse);
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
 body {
+  font-family: 'Roboto', sans-serif;
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: var(--midnight-black); /* Set the background color to dark blue */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Archivo', sans-serif !important;
+  font-weight: 600 !important;
 }
