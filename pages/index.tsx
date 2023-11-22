@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import 'app/globals.css'
 
-export default function index() {
+export default function Index() {
   const [isOpen, setIsOpen] = useState(false);
 
   const linkStyle = isOpen ? { fontSize: '0.875rem' } : { fontSize: '1.25rem' };
